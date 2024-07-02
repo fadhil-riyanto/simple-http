@@ -11,7 +11,7 @@ static void init_sock_fd(struct http_stack *http_stack)
 {
     int fd;
 
-    fd = socket(AF_INET, SOCK_STREAM | SOCK_NONBLOCK, 0);
+    fd = socket(AF_INET, SOCK_STREAM, 0);
     if (fd < 0) {
         perror("socket()");
         _exit(-1);
